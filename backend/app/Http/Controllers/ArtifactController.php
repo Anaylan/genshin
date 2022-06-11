@@ -49,7 +49,7 @@ class ArtifactController extends Controller
     public function show(Request $request, Artifact $artifact)
     {
         $request->artifact->rarity;
-        // $characters = $request->artifact;
+        $request->artifact->recommendations;
         return $artifact;
     }
 

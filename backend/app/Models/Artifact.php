@@ -14,8 +14,8 @@ class Artifact extends Model
         return $this->belongsTo(Rarity::class, 'rarityId');
     }
 
-    public function builds()
+    public function recommendations()
     {
-        return $this->belongsTo(Artifact_build::class);
+        return $this->hasMany(Artifact_build::class, 'artifactId');
     }
 }

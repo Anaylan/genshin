@@ -11,11 +11,11 @@ class Artifact_build extends Model
 
     public function artifact()
     {
-        return $this->belongsTo(Artifact::class);
+        return $this->belongsTo(Artifact::class, 'artifactId');
     }
 
     public function build()
     {
-        return $this->belongsTo(Build::class);
+        return $this->belongsTo(Build::class, 'buildId');
     }
 }
