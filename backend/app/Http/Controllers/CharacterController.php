@@ -44,12 +44,24 @@ class CharacterController extends Controller
      * @param  \App\Models\Character  $character
      * @return \Illuminate\Http\Response
      */
-    public function show(Character $character, Request $request)
+    public function show($character)
     {
-        $request->character->rarity;
-        $request->character->element;
-        $request->character->w_type;
-        return $character;
+        return Character::where('title', '=', $character)
+            ->with(
+                'rarity',
+                'element',
+                'constellations.icon',
+                'w_type',
+                'advantages',
+                'disadvantages',
+                'stories',
+                'skills.icon',
+                'builds.priorities.icon',
+                'builds.artifacts.artifact.rarity',
+                'builds.weapons.weapon.rarity',
+                'stats.MaterialsForCharacters.material.rarity'
+            )
+            ->get();
     }
 
     /**

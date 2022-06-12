@@ -11,6 +11,6 @@ class Disadvantage extends Model
 
     public function character()
     {
-        $this->belongsTo(Character::class);
+        return $this->belongsTo(Character::class, 'characterId');
     }
 }

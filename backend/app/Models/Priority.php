@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Priority extends Model
 {
     use HasFactory;
+
+    public function build()
+    {
+        return $this->belongsTo(Build::class);
+    }
+
+    public function icon()
+    {
+        return $this->belongsTo(Icon::class, 'iconId');
+    }
 }

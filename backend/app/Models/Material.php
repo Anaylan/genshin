@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Material extends Model
 {
     use HasFactory;
+
+    public function MaterialsForCharacters()
+    {
+        return $this->hasMany(MaterialForCharacter::class);
+    }
+
+    public function rarity()
+    {
+        return $this->belongsTo(Rarity::class, 'rarityId');
+    }
 }

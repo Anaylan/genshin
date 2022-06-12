@@ -13,4 +13,9 @@ class Weapon extends Model
     {
         return $this->belongsTo(Rarity::class, 'rarityId');
     }
+
+    public function recommendations()
+    {
+        return $this->hasMany(Weapon_build::class, 'weaponId');
+    }
 }

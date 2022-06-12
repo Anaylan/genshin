@@ -11,6 +11,6 @@ class W_type extends Model
 
     public function characters()
     {
-        $this->hasMany(Character::class);
+        return $this->hasMany(Character::class);
     }
 }

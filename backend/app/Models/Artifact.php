@@ -18,4 +18,9 @@ class Artifact extends Model
     {
         return $this->hasMany(Artifact_build::class, 'artifactId');
     }
+
+    public function characters()
+    {
+        return $this->hasMany(Character::class, 'characterId');
+    }
 }

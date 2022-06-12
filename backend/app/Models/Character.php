@@ -16,12 +16,12 @@ class Character extends Model
 
     public function advantages()
     {
-        $this->hasMany(Advantage::class);
+        return $this->hasMany(Advantage::class, 'characterId');
     }
 
     public function disadvantages()
     {
-        $this->hasMany(Disadvantage::class);
+        return $this->hasMany(Disadvantage::class, 'characterId');
     }
 
     public function w_type()
@@ -32,5 +32,30 @@ class Character extends Model
     public function element()
     {
         return $this->belongsTo(Element::class, 'elementId');
+    }
+
+    public function stories()
+    {
+        return $this->hasMany(Story::class, 'characterId');
+    }
+
+    public function skills()
+    {
+        return $this->hasMany(Skill::class, 'characterId');
+    }
+
+    public function constellations()
+    {
+        return $this->hasMany(Constellation::class, 'characterId');
+    }
+
+    public function builds()
+    {
+        return $this->hasMany(Build::class, 'characterId');
+    }
+
+    public function stats()
+    {
+        return $this->hasMany(Stat::class, 'characterId');
     }
 }

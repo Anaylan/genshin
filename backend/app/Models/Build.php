@@ -13,4 +13,19 @@ class Build extends Model
     {
         return $this->belongsTo(Character::class, 'characterId');
     }
+
+    public function artifacts()
+    {
+        return $this->hasMany(Artifact_build::class, 'buildId');
+    }
+
+    public function weapons()
+    {
+        return $this->hasMany(Weapon_build::class, 'buildId');
+    }
+
+    public function priorities()
+    {
+        return $this->hasMany(Priority::class, 'buildId');
+    }
 }

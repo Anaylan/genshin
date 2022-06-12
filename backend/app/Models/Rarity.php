@@ -25,4 +25,9 @@ class Rarity extends Model
     {
         return $this->hasMany(Weapon::class);
     }
+
+    public function materials()
+    {
+        return $this->hasMany(Material::class);
+    }
 }

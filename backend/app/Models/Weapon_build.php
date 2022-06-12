@@ -11,7 +11,7 @@ class Weapon_build extends Model
 
     public function weapon()
     {
-        return $this->belongsTo(Weapon::class);
+        return $this->belongsTo(Weapon::class, 'weaponId');
     }
 
     public function build()
