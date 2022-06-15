@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\MaterialForCharacter;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
-class MaterialForCharacterController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class MaterialForCharacterController extends Controller
      */
     public function index()
     {
-        //
+        return Event::all();
     }
 
     /**
@@ -41,10 +41,10 @@ class MaterialForCharacterController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\MaterialForCharacter  $materialForCharacter
+     * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(MaterialForCharacter $materialForCharacter)
+    public function show(Event $event)
     {
         //
     }
@@ -52,10 +52,10 @@ class MaterialForCharacterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\MaterialForCharacter  $materialForCharacter
+     * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit(MaterialForCharacter $materialForCharacter)
+    public function edit(Event $event)
     {
         //
     }
@@ -64,10 +64,10 @@ class MaterialForCharacterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\MaterialForCharacter  $materialForCharacter
+     * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, MaterialForCharacter $materialForCharacter)
+    public function update(Request $request, Event $event)
     {
         //
     }
@@ -75,10 +75,10 @@ class MaterialForCharacterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\MaterialForCharacter  $materialForCharacter
+     * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(MaterialForCharacter $materialForCharacter)
+    public function destroy(Event $event)
     {
         //
     }

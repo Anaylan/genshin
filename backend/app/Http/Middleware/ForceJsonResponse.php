@@ -17,6 +17,8 @@ class ForceJsonResponse
     public function handle(Request $request, Closure $next)
     {
         $request->headers->set('Accept', 'application/json');
+        header('Access-Control-Allow-Headers: *');
+        header('Access-Control-Allow-Methods: *');
         return $next($request);
     }
 }

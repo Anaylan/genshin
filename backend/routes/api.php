@@ -26,3 +26,7 @@ Route::get('/characters/{character:title}', [\App\Http\Controllers\CharacterCont
 Route::get('/artifacts', [\App\Http\Controllers\ArtifactController::class, 'index']);
 
 Route::get('/artifacts/{artifact:title}', [\App\Http\Controllers\ArtifactController::class, 'show']);
+
+Route::get('/wishes', [\App\Http\Controllers\WishController::class, 'index']);
+
+Route::get('events', [\App\Http\Controllers\EventController::class, 'index']);
